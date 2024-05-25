@@ -18,9 +18,12 @@ Including another URLconf
 from django.urls import path
 
 from app_user_registration.views import initial
+from app_user_registration.views import users
 
 urlpatterns = [
     # rota, view responsavel, nome de referencia
-    # primeira pag ex.: usuario.com
+    # primeira pag ex.: usuarios.com
     path('', initial.home, name='home'),
+    # usuarios.com/users
+    path('users/', users.users, name='user_list')
 ]
